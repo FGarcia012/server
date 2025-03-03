@@ -1,0 +1,185 @@
+/* Variables CSS para facilitar el mantenimiento */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --font-family: 'Arial', sans-serif;
+    --border-radius: 5px;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado, barra de navegación y pie de página */
+.site-header, .site-navbar, .site-footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.site-header {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.site-navbar {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.site-navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.site-navbar li {
+    margin: 0 10px;
+}
+
+.site-footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Estilos de los contenedores */
+.todo-container, .about-container, .contacto-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Títulos */
+h1, h2 {
+    color: #333;
+}
+
+/* Estilos de los formularios y entradas */
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: var(--success-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:focus {
+    outline: 2px solid #f39c12;
+}
+
+/* Estilos para el botón de agregar */
+.align-button {
+    margin-top: 10px; /* Añadido margen para separación entre input y botón */
+    text-align: center;
+}
+
+/* Estilos de la lista de tareas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+/* Estilo para los botones dentro de las tareas */
+li button {
+    background-color: var(--danger-color);
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+li button:hover {
+    opacity: 0.8;
+}
+
+li button:focus {
+    outline: 2px dashed #f39c12;
+}
+
+/* Estilos para tareas completadas */
+li.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li.completed button {
+    display: none; /* Oculta los botones de completar cuando la tarea está completa */
+}
+
+/* Efectos visuales para botones */
+.btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .todo-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        width: 80%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
